@@ -30,13 +30,13 @@ $(document).ready(function() {
 	$("body").prepend("<div>");
 	div = $("body").children(":first");
 	div.attr({ id:"themes", style:"padding:5px 8px" });
-
+/*
 	div.append('<small>Colour variations:</small>');
 	div.append('<a href="#" data-theme="css/style.css" title="Default Dark" data-background="#000"></a>');
 	div.append('<a href="#" data-theme="css/style_smokewine.css" title="Smoke Wine" data-background="#474244"></a>');
 	div.append('<a href="#" data-theme="css/style_forest.css" title="Forest" data-background="#BAD847"></a>');
 	div.append('<a href="#" data-theme="css/style_white.css" title="Light" data-background="#fff" data-logo="_black"></a>');
-
+*/
 
 	function setDefaultStyles() {
 		$('a', '#themes').each(function() {

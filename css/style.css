@@ -24,7 +24,7 @@ body {
   color: #eee;
   background: url('../img/content/background.png') #1c1c1c repeat top center;
   font-family: sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 20px;
   margin: 0;
   padding: 0;
@@ -49,7 +49,8 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4, 
+h5 {
   font-family: 'Armata', Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -75,11 +76,24 @@ h3 {
 h4 {
   font-size: 12px;
 }
+h5 {
+  font-size: 12px;
+}
+
 h3,
 h4,
 h3.span12,
 h4.span12 {
   margin-bottom: 15px;
+}
+h5,
+h5.span12 {
+  margin-bottom: 15px;
+  margin-left: 30px;
+}
+
+h1.spanlite {
+  margin-bottom: 0px;
 }
 /* Use <small> inside h1 to make a small text */
 h1 small {
@@ -112,6 +126,9 @@ p {
   padding: 0;
   text-shadow: 0 1px 0 #000;
 }
+/*p.intensive {
+  font-size: 10px;
+}*/
 /* Reset lists */
 ul {
   margin: 0 0 20px 0;
@@ -122,6 +139,7 @@ ul {
 p + p {
   margin-top: 10px;
 }
+
 /* Styling quotes */
 blockquote {
   margin: 20px 0 0 20px;
@@ -872,6 +890,12 @@ a.active {
   background-image: url(../img/icons/zoom.png);
   width: 50px;
   height: 50px;
+  background-position: 0;
+}
+.icon-zoom-mini {
+  background-image: url(../img/icons/zoom.png);
+  width:  0px;
+  height: 0px;
   background-position: 0;
 }
 .icon-play {

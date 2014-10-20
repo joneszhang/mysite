@@ -506,6 +506,13 @@ div.pp_andante .currentTextHolder {
 .media p {
   margin-bottom: 0;
 }
+
+.media p.content {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+
 /* Meta extension for the blog pages */
 .meta {
   font-size: 11px;

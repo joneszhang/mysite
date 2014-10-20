@@ -135,6 +135,8 @@ ul {
   padding: 0;
   list-style: none;
 }
+
+
 /* Add some margin when a paragraph is followed by another paragraph */
 p + p {
   margin-top: 10px;
@@ -492,6 +494,12 @@ div.pp_andante .currentTextHolder {
 .media h4 {
   margin: 0;
 }
+
+.media h3.spantitle{
+  margin-bottom: 30px;
+  width: 100%; 
+}
+
 .media .caption {
   padding: 15px;
 }
@@ -1010,6 +1018,7 @@ img.floatright {
   padding: 0;
   text-shadow: 0 1px 0 #000;
 }
+
 .filter a,
 .filter a:link,
 .filter a:visited {

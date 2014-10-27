@@ -9,7 +9,7 @@
 
   	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title>Zongsi.Zhang|Projects.Gem</title>
+	<title>Zongsi.Zhang|Projects.Kinect</title>
 	<meta name="description" content="Andante is a responsive business/porftolio/blog HTML5 template.">
 	<meta name="author" content="Giordano Piazza - http://www.giordanopiazza.com">
 
@@ -76,46 +76,33 @@
 	<!-- Page with Sidebar -->
 	<section id="content" role="main" class="container">
 	
-	    <h1 class="span12">Gem Optimization<small>(2014.7.20 - 2014.8.20)</small></h1>
+	    <h1 class="span12">Payment Module for Game Engine     <small>(2014.9.01 - 2014.10.30)</small></h1>
 	    <!-- Content column -->
     	<div>
-	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_1.jpg" class="floatleft" alt="Image title"></a><P>This summer, I entered Transmension Tech, Shanghai as an intern of game development. After 15 days of traning, the first project of my employee life came to me and and its difficulty really can match its special meaning. It's lucky that with the help of my mentor, I perfectly finished this task and did a presentation in a conference and became the first intern that able to do this.</p><p>Gem is a Tile-matching video game developed based on SexyFramework(A game engine created by Popcap), with the powerful cross-tools developed by our company, it can run on many different platforms. Combined with Chinese history story, this game has been released in the Republic of China and Taiwan.</p>
+	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_1.jpg" class="floatleft" alt="Image title"></a><p>For years our company</p>
 	    	
 	    	<div class="hr_pattern"></div>
 
-	    	<h3>My Task</h3>
-	    	 <p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_1.jpg" class="floatright" alt="Image title"></a><p>My task is to optimize this game so that it can run on a very old STB named Mod205, which have come into market more than 14 years(But it's now still at work in over one million families). But gem was built last year and although it's a ligeweight game, it's requirement for environment still largely excess what Mod205 can offer.</p><p>As this picture shows, the STB offers less thant 10MB room for texture memory and only 20+ room for memory. Besides, due to its age, the condition of cpu really is doutful. For the worst one I've met, its throughput is so poor that it will dump when more than 2MB data is converted into graphics card. Which means that I not only need to compress the space it requests. I also have to control the amount of data that is transported at once.</p>
+	    	<h3>Team Members</h3>
+	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_1.jpg" class="floatright" alt="Image title"></a><p>Fan Zikun(Captain, Server dev), undergraduate, college of software engineering, Southeast University.<br />Zhang Zongsi(front-end dev, UI design), undergraduate, college of software engineering, Southeast University. <br />Yan Zhengyang(front-end dev), undergraduate, college of software engineering, Southeast University. <br />Fu Yi(Middleware dev, Database dev), undergraduate, college of software engineering, Southeast University. <br />Gao Zihao(Database dev, Test), undergraduate, college of software engineering, Southeast University. </p><p>We originally made it for our summer training guided by Oracle. Then we find that there are many points that can be improved so we participated the IBM Mainframe Technology and Skiils Application 2013 National Campus Contest Team Competition. During which we transplanted our server from http to mainframe and optimized our logic. Finally we won the third prize of the competition. For most of us it's the first time to build such a complex project and many techniques were stranger to us, which means we can only learning by doing and to keep high efficiency we had to work more than 12 hours a day. But our passion finally brought us a good result, it was a perfect team work experience.</p>
     	
 	    	<div class="hr_pattern"></div>
 
-	    	<h3>Color Mode</h3>
-	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_2.jpg" class="floatleft" alt="Image title"></a><p>Thanks to the SexyFramework's powerful construction. I can change the color mode, according to which the engine will load pixels in certain digits, via simply clarifying in XML files. The normal way is to load every pixel in 24 digits with 6 digits separately for Alpha, Red, Blue and Green. To eliminate the texture memory occupation, I cut it into 16 digits(A4R4G4B4). Which can reduce the texture memory of every picture into nearly 60%. But the disadvantage is that the quality of pictures will decrease. As the picture shows, the picture that was loaded in a4r4g4b4 shows apparent chromatic aberration. But taking age of this STB into account, this aberration is tolerable.</p>
+	    	<h3>What's special</h3>
+	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_2.jpg" class="floatright" alt="Image title"></a><p>As only a group of student, we had no right to access data from banks as Alipay did. So we can only build a virtual bank system by ourselves. We wrote a script to create 20 thousand of records which contains virtual information of name, ID card numbers, bank card numbers and so on. Also, we built our own database to solve the information of our users. All payment operations are solved in server. The data that to be transfered are all encripted by MD5(regarded to be safe at that time) and we add functions like SSO to guarantee the safety of users' accounts.</p><p>The design of payment algorithm was also difficult. To decide which card to use, we should compare the balance, special offer of different banks and user's habit. If it concerns about "go Dutch", we need to dynamically calculate the average amount and choose the best card for receiver to eliminate the poundage.</p><p>Besides, after we entered the IBM contest, we transplanted our server to a mainframe, which was erected in Dalian and we can only work on it via remote connection. And thanks to the course Introduction of Mainframe, we got a lot of guidiance from our teacher, an engineer with more than 30 years of mainframe based development.</p>
 
  	    	<div class="hr_pattern"></div>
 
-	    	<h3>Dynamic memory control</h3>
-	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_2.jpg" class="floatright" alt="Image title"></a><p>Besides the simple but effective manner. I also took some accurate manners. After carefully reading the source codes of SexyAppFramework. I figured out how it manage the texture memory. It put all textures in a Set, which means the order inside the container is not linearly relative with the order I put it into the Texture Memory. So I have to build a management system myself. So for every large resources(For example, images larger than 500 * 400), I record their pointer before put it into the Set. And every time the Texture memory is beyond the threshold value, I will do some clean work via this list.</p>
+	    	<h3>Android!</h3>
+	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_2.jpg" class="floatleft" alt="Image title"></a><p>Before this project, I knew little about android based development, which means quiet large amount of knowlege waits to be absorbed before I started programming. So before our programming work started I downloaded 2GB of learning material and read everyday. Hard as I've tried, my progress of learning still can't meet the demands of the project, so I can only learn by doing. And in only just 3 weeks I learned and applied SQLITE, Sharedpreference and 4 basic tools of andoird like Intent and Broadcast.<p>Finally I applied the local database with both Sqlite and sharedpreference. Every time users enter the app I'll ask server for updated information, if it failed, I will show the information stored in the local database, which will still help the user. For the UI, I used relative layout, which means my front end could fit most intelligent phones today. Also, I've learned a lot about the application of View library of andoird and implemented a completed front end with visual effects like gallery and 3D Rotation. Also, to contact with the server, I add child threads to solve the transfer work so that the ui could keep smooth when connecting to the server. Also, with the help of intent and broadcast, I implemented the GPS locating and sent shortmessage automatically.</p>
    
 	
 	    	<div class="hr_pattern"></div>
 
-	    	<h3>Frenquency of operation</h3>
-	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_2.jpg" class="floatleft" alt="Image title"></a><p>To solve the problem of bandwith and unstability. I limit the frequecny of click remote-control into 2 times a second. which will give the machine some time to do the transportation work. To finish this I use time.h to read the time of the last click and compare with the next click, if the time is within 0.5 seconds, I will neglect it and record it as the last click.</p><p>For some extreme condition in which the machine may dump irregularlly, I took a manner of necessity. For a group of drawing action, I seperately finish them every, say, 10 milliseconds, which may diminish the experience, but will guarantee the stability cause 10 miliseconds is enough for any computer to transport dozens kb of data. </p>
-
-                <div class="hr_pattern"></div>
-
-	    	<h3>Relative Tech</h3>
-	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_2.jpg" class="floatright" alt="Image title"></a><p>Besides the main problems. I also helped solve another instersting problem, the nexus module between remote-control and the television. This is too complex a problem(involved in cross-compile) that I can only find where the bugs are and follow the instructions of the system manager to solve them. But via our cooperation, I've learned a lot about compiler system of linux and a lot of practical operator in Terminal.</p>
-                <div class="hr_pattern"></div>
-
-                <h3>For more details</h3>
-                <p>Here I attach the PPT I used for presentation. If you want to know more about this project, please don't hesitate to click the button below</p>
-                <p><a href="#" class="button full">The Slides of my presentation</a></p>
-
-
+	    	<h3>UI Design</h3>
+	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_2.jpg" class="floatright" alt="Image title"></a><p>For the first time, I got involved in UI design, which was pretty hard for a guy with no design experiece. But I really admired designer's work and had was willing to start from scratch. So for about 15 days I practiced my PS skill and design ability via imitated existed works. I modified my design again and again and fianlly identified the sytle of our homepage. Then in about one week I finished all design pictures with the help of Fan zikun, he was really a gifted guy of design. I really admire flatterning and thanks to this experience, I learned a lot about color schemes and interactive design. It's very pround a thing to see the front-end I implemented running in numerous of mobile phones.</p>
 	    </div> <!-- / Content column -->
 
-	
 	</section>
 
 
@@ -177,6 +164,7 @@
 
         </div> <!-- / .container -->
     </footer> <!-- / #main-footer -->
+
 
 
 

@@ -93,52 +93,33 @@
 
  	    	<div class="hr_pattern"></div>
 
-	    	<h3>UI design</h3>
-		<div class="span8">
-      		  <div id="details" class="content-slider compact-nan">    
-		    <div class="flexslider">
-    		      <ul class="slides">
-		      <!-- Slide 1 -->
-		        <li>
-  		            <img src="img/content/744/content_1.jpg" alt="Image 1" />
-                        <!-- <p class="big-caption">Responsive design</p> -->
-                        </li>
-                         <!-- Slide 2 -->
-                        <li>
-                             <img src="img/content/744/content_7.jpg" alt="Image 2" />
-                          <!-- <p class="small-caption">This image is wrapped in a link!</p> -->
-                        </li>
-                        <li>
-                             <img src="img/content/554/content_2.jpg" alt="Image 3" />
-                          <!-- <p class="small-caption">This image is wrapped in a link!</p> -->
-                        </li>
-
-            </ul>
-	    </div>
-          </div>
-      </div>
-
-    <div class="span4">
-      <h3>Overview</h3>
-      <p>.</p>
-    </div>
+	    	<h3>New aproach to fit screen</h3>
+	    	</a><p>In the last android project, my work was largely limited by andoird's xml system and to reach some effects many zigzaggery needed to be taken, which really had undermined my efficient. So when another project came to me, I considered to take another strategy, I decided to dynamically buil the construction of views, which mean all the layers will be defined via java but not xml files. And via calculating the ratio previously and getting the screen size by the android sdk, so that the whole interface will dynamically adpat to almost all different screens.</p><p>Besides, the fundamental widgets offered by android can't meet my demands anymore. So I started to write my own DIY widget via implementing and overwrite methods of View class. And finally creat very intersting widgets mysefl. Especially, just as the picutre shows, I rewrite the list widget and implement a kind of list that only shows the chosen unit and will shows other members only when the list is focused. Besides, it supports recycling shows. To implement them, I did a lot of research on how View works and did a lot of work to design the drawing path on canvas. Besides, the update problem is also difficult and I finally resolved it via creating an extra list to manage their update and draw.</p>
 
 
 	    	<div class="hr_pattern"></div>
+	    	<h3>UI Design</h3>
+        <p>This is the second time I design UI, but it's the first time for a commercialized product. So I have to try my best to, at least, meet the demands of the marketing team. And after three versions of modification I finally ensured the UI design. I have to promise that it's still a amateur shot. But I had tried my best for it and enjoyed the process of creating. That's me, I will try anything interesting no matter what what it can pay back and how difficult it was.</p>
+        <ul class="tabs clearfix">
+          <li><a href="#one" class="default-tab">first version</a></li>
+          <li><a href="#two">final version</a></li>
+          <li><a href="#three">DIY Widgets</a></li>
+        </ul>
+        <div class="tabs-content">
+          <div id="one">
+            <p>the first version. Take reference of IOS and use two hues, gray and pink, respectively for boys and girls. To design this I've researched at least 10 different examples. This UI is designed based on the idea of card and drawer, with style of flattening.</p>
+            <img  class="unit" src="img/content/thumbs/thumb_2.jpg" ><img class="unit" src="img/content/thumbs/thumb_2.jpg">
+          </div>
+          <div id="two">
+            <p>The final version, added more elements in the homepage and change the hue into blue to show the sporty style of our App.</p>
+            <img  class="unit" src="img/content/thumbs/thumb_2.jpg" ><img class="unit" src="img/content/thumbs/thumb_2.jpg">
+          </div>
+          <div id="three">
+            <p>The DIY widgets made by myself and some other intersting widgets designed by me.</p>
+            <img  class="unit" src="img/content/thumbs/thumb_2.jpg" ><img class="unit" src="img/content/thumbs/thumb_2.jpg">
+          </div>
 
-	    	<h3>Frenquency of operation</h3>
-	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_2.jpg" class="floatleft" alt="Image title"></a><p>To solve the problem of bandwith and unstability. I limit the frequecny of click remote-control into 2 times a second. which will give the machine some time to do the transportation work. To finish this I use time.h to read the time of the last click and compare with the next click, if the time is within 0.5 seconds, I will neglect it and record it as the last click.</p><p>For some extreme condition in which the machine may dump irregularlly, I took a manner of necessity. For a group of drawing action, I seperately finish them every, say, 10 milliseconds, which may diminish the experience, but will guarantee the stability cause 10 miliseconds is enough for any computer to transport dozens kb of data. </p>
-
-                <div class="hr_pattern"></div>
-
-	    	<h3>Relative Tech</h3>
-	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_2.jpg" class="floatright" alt="Image title"></a><p>Besides the main problems. I also helped solve another instersting problem, the nexus module between remote-control and the television. This is too complex a problem(involved in cross-compile) that I can only find where the bugs are and follow the instructions of the system manager to solve them. But via our cooperation, I've learned a lot about compiler system of linux and a lot of practical operator in Terminal.</p>
-                <div class="hr_pattern"></div>
-
-                <h3>For more details</h3>
-                <p>Here I attach the PPT I used for presentation. If you want to know more about this project, please don't hesitate to click the button below</p>
-                <p><a href="#" class="button full">The Slides of my presentation</a></p>
-
+        </div>
 
 	    </div> <!-- / Content column -->
 

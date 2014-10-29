@@ -754,6 +754,11 @@ hr.small,
 .accordion-content + .accordion-trigger {
   border-top: #444 dotted 1px;
 }
+
+/* diy */
+img.unit {
+  margin-left: 15px;
+}
 /* Tabs */
 /* ----------------------------------------------------- */
 ul.tabs {

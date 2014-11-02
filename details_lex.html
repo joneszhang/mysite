@@ -55,9 +55,9 @@
 
 		    <nav id="main-nav" class="clearfix">
 		    	<ul class="dropdown">
-				    <li class="current"><a href="index-2.html">Home</a></li>
+				    <li ><a href="index-2.html">Home</a></li>
 				    <li><a href="intro_profession.html">About</a></li>
-				    <li><a href="portfolio.html">Portfolio</a></li>
+				    <li class="current"><a href="portfolio.html">Portfolio</a></li>
 				    <li><a href="contact.html">Contact</a></li>
 				</ul> <!-- / .dropdown -->
 		    </nav> <!-- / #main-nav -->
@@ -70,31 +70,51 @@
 	<!-- Page with Sidebar -->
 	<section id="content" role="main" class="container">
 	
-	    <h1 class="span12">Payment Module for Game Engine     <small>(2014.9.01 - 2014.10.30)</small></h1>
+	    <h1 class="span12">Lex     <small>(2013.10.01 - 2013.12.30)</small></h1>
 	    <!-- Content column -->
     	<div>
-	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_1.jpg" class="floatleft" alt="Image title"></a><p>Recently our company imported dozens of Mobile games from abroad and want's to publish them in national market via the channel of mobile operators like CMCC and China Union. All of these games are built based on Cocos2dx and we need to add a payment module into Cocos2dx so that we can easily apply them to all the games at once.</p><p>These games, developed on cocos, can run on Android, which means an excessive layer of java and C++ exists and we found that it was JNI. To implement this module, our works started around 3 layers- payment api in java, excessive tools in JNI, and UI implementation in C++.</p>
+	<p>This is the curriculum design for The Principle of Compile. It's a lex that can handle a group of regular expressions and finally generate a .cpp file that can work as a DFA. The specific requirements of this project is as follow.</p>
+        <p>1)Programming based on FA
+        <br /> 1.a)Define some REs by yourself
+         <br />   1.b)Convert REs into NFAs
+           <br /> 1.c)Merge these NFAs into a single NFA
+           <br /> 1.d)Convert the NFA into a DFA with minimum states
+           <br /> 1.e)Programming based on the DFA
+           <br /> 2)Generating programs based on your own Lex
+b)Generating programs based on your own Lex
 	    	
 	    	<div class="hr_pattern"></div>
 
-	    	<h3>Division of labour</h3>
-	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_1.jpg" class="floatright" alt="Image title"></a><p>Due to my performance in last project, I was appointed as the leader of a team that consists of 3 people. The other two guys are also interns and people of high efficiency. We respectively implement modules for CMCC, China Union and China Telecom. Besides, I controled the progress and the construction of your project. Everytime we got some progress, I will call us together for a conference and check the codes together with them. And after the initial programming works were done, they were aksed to join another group and I finished the integration of codes and optimized the compile scripts of games.</p>    	
+	    	<h3>NFA development</h3>
+	  <p>This is the most basic and difficult problem, as a programmer with
+some experience, I come up with lined list and recursion function
+immediately. But the problem is how to explode the re and how to descend
+the states to the scions of a father function. And I solve this problem by do
+analyzing first. I extract the sub string when meeting ‘|’,cause it has the
+highest priority when other symbols are of the same level. And if there is
+no ‘|’, The ‘(’ and ‘)’ will be of the first. I extract the sub string of ()
+and ()* and build add states in the rules of the textbook and then
+descending the two parent states to the sub-function to solve the sub-
+string</p>    	
 	    	<div class="hr_pattern"></div>
 
-	    	<h3>Operators' SDK</h3>
-	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_2.jpg" class="floatright" alt="Image title"></a><p>Thanks to the rapid development of China's mobile application market, the main operators have already published very mature SDK for App developers. So it seems easy to init and submit order to their server. But for some operators, very complex identification work needs to be done for finishing payment. China Union, for example, will ask you to submit the order to your own server first and send another piece to its server, it will then check it with your server and go to process the payment. Success or not, it will only send the result to your server, which means you have to keep asking your server whether payment has successed after you submitted the order, which means extra codes that support http requests.</p><p>Besides, to fullfill the best structure of codes. We did a lot of work to make up the project directory so that only via changing codes of complile scripts, we can combine SDK of different operators so that we can offer more paths of payment to our clients.</p>
+	    	<h3>DFA Development</h3>
+	    	<p>I have to admit that this problem is the most complicated one of all. It
+contains 5 layers of circulation if you use the method of iteration. At first I
+decide to use ArrayList object to restore every set of states. But I find that it
+will be extremely difficult to search the whole diagram. So I choose an
+indirect way. I use two matched array to store the group number of every
+state. Once the group is changed, what I need to do is just change the
+mark on the state, but not move it into a real ArrayList. And I can search
+the diagram easily. That’s really an interesting improvement.</p>
 
  	    	<div class="hr_pattern"></div>
 
-	    	<h3>JNI</h3>
-	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_2.jpg" class="floatleft" alt="Image title"></a><p>I've never got involved in JNI before and have no idea about how the C++ and java can cowork. So I had to read all the codes other people had written previously and try to find out how it works. I frist read the C++ codes, found where did it call the JNI codes. In this way, I traversed the whole three levels of codes and made it clear how to construct a path that connects C++ and java. I finally chose the static methods to solve this problem because in all games there will only be 1 order at the same time, which means statuc methods are already enough.</p>
+	    	<h3>Course Outline</h3>
+	    	<p>During this course our teacher introduced the basic theories of compile with the famous book, the Dragon book. The general contents of our course are as follow.</p>
+                <p>1. Role of compiler; 2. Programming Language: Concepts, Design, Recognization; 3. Lexical Analyzer; 4. Regular Grammar; 5. The Role of the Parser; 6. Top-Down Parsing; 7. Bottom-up Parsing; 8. Semantics Rules; 9. Intermediate Code Generation;10.Run-time Environment; 11. Machine Independent Optimization. </p>
    
-	
-	    	<div class="hr_pattern"></div>
-
-	    	<h3>Compiler</h3>
-	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_2.jpg" class="floatright" alt="Image title"></a><p>After finish coding, it's time to write a scricpt that can automatically create different packages according simple parameters like oem=MobileCM, which requires some knowledge of scripts and compile. Thanks to previous work, the compile of C++ files has already finished, so we concentrated on android compile. We linked anroid-ndk and use ant to help finish building. As I have mentioned before, to make compile easier, we did a lot of work to made up codes. We build directory like Mobilebase to slove .java of basic functions that serve all operators' SDK. For each SDK, we created, say MobileCMBase and MobileCM to save respectively save codes for bassic functions for CMCC's SDK and functions for the call of C++ layer. So that for fusion package, we could imported all functions via just add android.library.reference in project.properties.</p><p>As to scripts, after quick learning, I got the manner to reveive parameters and set conditional judgment. And after one day of work, I finished modifying compiler scripts.</p>
-	    </div> <!-- / Content column -->
+	   </div> <!-- / Content column -->
 
 	</section>
 

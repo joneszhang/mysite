@@ -55,9 +55,9 @@
 
 		    <nav id="main-nav" class="clearfix">
 		    	<ul class="dropdown">
-				    <li class="current"><a href="index-2.html">Home</a></li>
+				    <li><a href="index-2.html">Home</a></li>
                                     <li><a href="intro_profession.html">About</a></li>
-				    <li><a href="portfolio.html">Portfolio</a></li>
+				    <li class="current"><a href="portfolio.html">Portfolio</a></li>
 				    <li><a href="contact.html">Contact</a></li>
 				</ul> <!-- / .dropdown -->
 		    </nav> <!-- / #main-nav -->
@@ -73,39 +73,33 @@
 	    <h1 class="span12">Gem Optimization<small>(2014.7.20 - 2014.8.20)</small></h1>
 	    <!-- Content column -->
     	<div>
-	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_1.jpg" class="floatleft" alt="Image title"></a><P>This summer, I entered Transmension Tech, Shanghai as an intern of game development. After 15 days of traning, the first project of my employee life came to me and and its difficulty really can match its special meaning. It's lucky that with the help of my mentor, I perfectly finished this task and did a presentation in a conference and became the first intern that able to do this.</p><p>Gem is a Tile-matching video game developed based on SexyFramework(A game engine created by Popcap), with the powerful cross-tools developed by our company, it can run on many different platforms. Combined with Chinese history story, this game has been released in the Republic of China and Taiwan.</p>
+	    <P>This summer, I entered Transmension Tech, Shanghai as an intern of game development. After 15 days of traning, the first project of my employee life came to me and and its difficulty really can match its special meaning. It's lucky that with the help of my mentor, I perfectly finished this task and did a presentation in a conference and became the first intern that able to do this.</p><p>Gem is a Tile-matching video game developed based on SexyFramework(A game engine created by Popcap), with the powerful cross-tools developed by our company, it can run on many different platforms. Combined with Chinese history story, this game has been released in the Republic of China and Taiwan.</p>
 	    	
 	    	<div class="hr_pattern"></div>
 
 	    	<h3>My Task</h3>
-	    	 <p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_1.jpg" class="floatright" alt="Image title"></a><p>My task is to optimize this game so that it can run on a very old STB named Mod205, which have come into market more than 14 years(But it's now still at work in over one million families). But gem was built last year and although it's a ligeweight game, it's requirement for environment still largely excess what Mod205 can offer.</p><p>As this picture shows, the STB offers less thant 10MB room for texture memory and only 20+ room for memory. Besides, due to its age, the condition of cpu really is doutful. For the worst one I've met, its throughput is so poor that it will dump when more than 2MB data is converted into graphics card. Which means that I not only need to compress the space it requests. I also have to control the amount of data that is transported at once.</p>
+	    	<p>My task is to optimize this game so that it can run on a very old STB named Mod205, which have come into market more than 14 years(But it's now still at work in over one million families). But gem was built last year and although it's a ligeweight game, it's requirement for environment still largely excess what Mod205 can offer.</p><p>As this picture shows, the STB offers less thant 10MB room for texture memory and only 20+ room for memory. Besides, due to its age, the condition of cpu really is doutful. For the worst one I've met, its throughput is so poor that it will dump when more than 2MB data is converted into graphics card. Which means that I not only need to compress the space it requests. I also have to control the amount of data that is transported at once.</p>
     	
 	    	<div class="hr_pattern"></div>
 
 	    	<h3>Color Mode</h3>
-	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_2.jpg" class="floatleft" alt="Image title"></a><p>Thanks to the SexyFramework's powerful construction. I can change the color mode, according to which the engine will load pixels in certain digits, via simply clarifying in XML files. The normal way is to load every pixel in 24 digits with 6 digits separately for Alpha, Red, Blue and Green. To eliminate the texture memory occupation, I cut it into 16 digits(A4R4G4B4). Which can reduce the texture memory of every picture into nearly 60%. But the disadvantage is that the quality of pictures will decrease. As the picture shows, the picture that was loaded in a4r4g4b4 shows apparent chromatic aberration. But taking age of this STB into account, this aberration is tolerable.</p>
+	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/gem/content/color.png" data-rel="gallery[projects1]"><img src="img/gem/cuts/color.png" class="floatleft" alt="Image title"></a><p>Thanks to the SexyFramework's powerful construction. I can change the color mode, according to which the engine will load pixels in certain digits, via simply clarifying in XML files. The normal way is to load every pixel in 24 digits with 6 digits separately for Alpha, Red, Blue and Green. To eliminate the texture memory occupation, I cut it into 16 digits(A4R4G4B4). Which can reduce the texture memory of every picture into nearly 60%. But the disadvantage is that the quality of pictures will decrease. As the picture shows, the picture that was loaded in a4r4g4b4 shows apparent chromatic aberration. But taking age of this STB into account, this aberration is tolerable.</p>
 
  	    	<div class="hr_pattern"></div>
 
 	    	<h3>Dynamic memory control</h3>
-	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_2.jpg" class="floatright" alt="Image title"></a><p>Besides the simple but effective manner. I also took some accurate manners. After carefully reading the source codes of SexyAppFramework. I figured out how it manage the texture memory. It put all textures in a Set, which means the order inside the container is not linearly relative with the order I put it into the Texture Memory. So I have to build a management system myself. So for every large resources(For example, images larger than 500 * 400), I record their pointer before put it into the Set. And every time the Texture memory is beyond the threshold value, I will do some clean work via this list.</p>
+	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/gem/content/memory.jpg" data-rel="gallery[projects1]"><img src="img/gem/cuts/memory.jpg" class="floatright" alt="Image title"></a><p>Besides the simple but effective manner. I also took some accurate manners. After carefully reading the source codes of SexyAppFramework. I figured out how it manage the texture memory. It put all textures in a Set, which means the order inside the container is not linearly relative with the order I put it into the Texture Memory. So I have to build a management system myself. So for every large resources(For example, images larger than 500 * 400), I record their pointer before put it into the Set. And every time the Texture memory is beyond the threshold value, I will do some clean work via this list.</p>
    
 	
 	    	<div class="hr_pattern"></div>
 
 	    	<h3>Frenquency of operation</h3>
-	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_2.jpg" class="floatleft" alt="Image title"></a><p>To solve the problem of bandwith and unstability. I limit the frequecny of click remote-control into 2 times a second. which will give the machine some time to do the transportation work. To finish this I use time.h to read the time of the last click and compare with the next click, if the time is within 0.5 seconds, I will neglect it and record it as the last click.</p><p>For some extreme condition in which the machine may dump irregularlly, I took a manner of necessity. For a group of drawing action, I seperately finish them every, say, 10 milliseconds, which may diminish the experience, but will guarantee the stability cause 10 miliseconds is enough for any computer to transport dozens kb of data. </p>
+	    	<p>To solve the problem of bandwith and unstability. I limit the frequecny of click remote-control into 2 times a second. which will give the machine some time to do the transportation work. To finish this I use time.h to read the time of the last click and compare with the next click, if the time is within 0.5 seconds, I will neglect it and record it as the last click.</p><p>For some extreme condition in which the machine may dump irregularlly, I took a manner of necessity. For a group of drawing action, I seperately finish them every, say, 10 milliseconds, which may diminish the experience, but will guarantee the stability cause 10 miliseconds is enough for any computer to transport dozens kb of data. </p>
 
                 <div class="hr_pattern"></div>
 
 	    	<h3>Relative Tech</h3>
-	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/content/744/content_11.jpg" data-rel="gallery[projects1]"><img src="img/content/thumbs/thumb_2.jpg" class="floatright" alt="Image title"></a><p>Besides the main problems. I also helped solve another instersting problem, the nexus module between remote-control and the television. This is too complex a problem(involved in cross-compile) that I can only find where the bugs are and follow the instructions of the system manager to solve them. But via our cooperation, I've learned a lot about compiler system of linux and a lot of practical operator in Terminal.</p>
-                <div class="hr_pattern"></div>
-
-                <h3>For more details</h3>
-                <p>Here I attach the PPT I used for presentation. If you want to know more about this project, please don't hesitate to click the button below</p>
-                <p><a href="#" class="button full">The Slides of my presentation</a></p>
-
+	    	<p>Besides the main problems. I also helped solve another instersting problem, the nexus module between remote-control and the television. This is too complex a problem(involved in cross-compile) that I can only find where the bugs are and follow the instructions of the system manager to solve them. But via our cooperation, I've learned a lot about compiler system of linux and a lot of practical operator in Terminal.</p>
 
 	    </div> <!-- / Content column -->
 

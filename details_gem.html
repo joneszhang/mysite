@@ -76,7 +76,12 @@
 	<!-- Page with Sidebar -->
 	<section id="content" role="main" class="container">
 	
-	    <h1 class="span12">Gem Optimization<small>(2014.7.20 - 2014.8.20)</small></h1>
+	    <h1 class="span12">Gem Optimization<small>(2014.7.20 - 2014.8.20)</small>
+	    		<a class="pointer" href="details_afm.html"><img src="img/icons/arrow_right.gif" alt="Next item"></a>
+	    		<a class="pointer" href="portfolio.html"><img src="img/icons/overview.png" alt="Back to the overview"></a>
+	    		<a class="pointer" href="details_windwalk.html"><img src="img/icons/arrow_left.gif" alt="Previous item"></a>
+
+			</h1>
 	    <!-- Content column -->
     	<div>
 	    <P>This summer, I entered Transmension Tech, Shanghai as an intern of game development. After 15 days of traning, the first project of my employee life came to me and and its difficulty really can match its special meaning. It's lucky that with the help of my mentor, I perfectly finished this task and did a presentation in a conference and became the first intern that able to do this.</p><p>Gem is a Tile-matching video game developed based on SexyFramework(A game engine created by Popcap), with the powerful cross-tools developed by our company, it can run on many different platforms. Combined with Chinese history story, this game has been released in the Republic of China and Taiwan.</p>
@@ -89,12 +94,12 @@
 	    	<div class="hr_pattern"></div>
 
 	    	<h3>Color Mode</h3>
-	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/gem/content/color.png" data-rel="gallery[projects1]"><img src="img/gem/cuts/color.png" class="floatleft" alt="Image title"></a><p>Thanks to the SexyFramework's powerful construction. I can change the color mode, according to which the engine will load pixels in certain digits, via simply clarifying in XML files. The normal way is to load every pixel in 24 digits with 6 digits separately for Alpha, Red, Blue and Green. To eliminate the texture memory occupation, I cut it into 16 digits(A4R4G4B4). Which can reduce the texture memory of every picture into nearly 60%. But the disadvantage is that the quality of pictures will decrease. As the picture shows, the picture that was loaded in a4r4g4b4 shows apparent chromatic aberration. But taking age of this STB into account, this aberration is tolerable.</p>
+	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/gem/content/color.png" data-rel="gallery[projects1]"><img src="img/gem/cuts/color.png" class="floatleft" alt="Comparison of different color modes"></a><p>Thanks to the SexyFramework's powerful construction. I can change the color mode, according to which the engine will load pixels in certain digits, via simply clarifying in XML files. The normal way is to load every pixel in 24 digits with 6 digits separately for Alpha, Red, Blue and Green. To eliminate the texture memory occupation, I cut it into 16 digits(A4R4G4B4). Which can reduce the texture memory of every picture into nearly 60%. But the disadvantage is that the quality of pictures will decrease. As the picture shows, the picture that was loaded in a4r4g4b4 shows apparent chromatic aberration. But taking age of this STB into account, this aberration is tolerable.</p>
 
  	    	<div class="hr_pattern"></div>
 
 	    	<h3>Dynamic memory control</h3>
-	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/gem/content/memory.jpg" data-rel="gallery[projects1]"><img src="img/gem/cuts/memory.jpg" class="floatright" alt="Image title"></a><p>Besides the simple but effective manner. I also took some accurate manners. After carefully reading the source codes of SexyAppFramework. I figured out how it manage the texture memory. It put all textures in a Set, which means the order inside the container is not linearly relative with the order I put it into the Texture Memory. So I have to build a management system myself. So for every large resources(For example, images larger than 500 * 400), I record their pointer before put it into the Set. And every time the Texture memory is beyond the threshold value, I will do some clean work via this list.</p>
+	    	<p><a class="object" data-hover="icon-zoom-mini" href="img/gem/content/memory.jpg" data-rel="gallery[projects1]"><img src="img/gem/cuts/memory.jpg" class="floatright" alt="The procedure of image processing"></a><p>Besides the simple but effective manner. I also took some accurate manners. After carefully reading the source codes of SexyAppFramework. I figured out how it manage the texture memory. It put all textures in a Set, which means the order inside the container is not linearly relative with the order I put it into the Texture Memory. So I have to build a management system myself. So for every large resources(For example, images larger than 500 * 400), I record their pointer before put it into the Set. And every time the Texture memory is beyond the threshold value, I will do some clean work via this list.</p>
    
 	
 	    	<div class="hr_pattern"></div>
@@ -125,7 +130,7 @@
 
 				<!-- Post -->
 			    <div class="media">
-			    	<a class="object" data-hover="icon-zoom" href="img/content/744/content_11.jpg" data-rel="gallery"><img src="img/content/thumbs/minithumb_1.jpg" alt="Image title"></a>
+			    	<a class="object"><img src="img/quicklink/kinect.jpg"></a>
 			        <div class="caption">
 				       	<h4><a href="details_kinect.html">Pop And Tip &mdash; Somatic Kinect Game</a></h4>
 			      		<p><span>12-2013</span></p>
@@ -136,7 +141,7 @@
 			<!-- Twitter widget -->
 			<div class="span3">
    			    <div class="media">
-			    	<a class="object" data-hover="icon-zoom" href="img/headers/header_2.jpg" data-rel="gallery"><img src="img/content/thumbs/minithumb_4.jpg" alt="Image title"></a>
+			    	<a class="object"><img src="img/quicklink/gem.jpg"></a>
 			        <div class="caption">
 				       	<h4><a href="details_gem.html">Gem &mdash; STB game optimization</a></h4>
 			      		<p><span>07-2014</span></p>
@@ -148,8 +153,8 @@
 			<!-- Flickr widget -->
 			<div class="span3 ">
 	   			    <div class="media">
-			    	<a class="object" data-hover="icon-zoom" href="img/headers/header_2.jpg" data-rel="gallery"><img src="img/content/thumbs/minithumb_4.jpg" alt="Image title"></a>
-			        <div class="caption">
+			    	<a class="object"><img src="img/quicklink/afm.jpg"></a>
+		        <div class="caption">
 				       	<h4><a href="details_afm.html">AFM &mdash; Mainframe&android based App</a></h4>
 			      		<p><span>09-2013</span></p>
 			        </div>
@@ -160,7 +165,7 @@
 			<!-- Contact -->
 			<div class="span3">
 	   		    <div class="media">
-			    	<a class="object" data-hover="icon-zoom" href="img/headers/header_2.jpg" data-rel="gallery"><img src="img/content/thumbs/minithumb_4.jpg" alt="Image title"></a>
+			    	<a class="object"><img src="img/quicklink/lex.jpg"></a>
 			        <div class="caption">
 				       	<h4><a href="details_lex.html">Lex &mdash; DFA based Lex</a></h4>
 			      		<p><span>11-2013</span></p>
@@ -168,8 +173,8 @@
 			    </div> <!-- / Post -->
 
 			</div> <!-- / Contact -->
-
         </div> <!-- / .container -->
+
 	<div class="container">
          <div>
                 <h3>Special Thanks To</h3>
@@ -184,6 +189,7 @@
            
 	</div><!-- container for thanks end-->
     </footer> <!-- / #main-footer -->
+
 
 
 

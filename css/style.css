@@ -1033,6 +1033,9 @@ img.bigcenter {
   padding: 0;
   text-shadow: 0 1px 0 #000;
 }
+a.pointer{
+  float: right;	
+}
 
 .filter a,
 .filter a:link,

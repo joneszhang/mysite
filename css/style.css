@@ -22,7 +22,7 @@ html {
 }
 body {
   color: #eee;
-  background: url('../img/content/background.png') #1c1c1c repeat top center;
+  background: #fff;
   font-family: sans-serif;
   font-size: 14px;
   line-height: 20px;
@@ -163,7 +163,7 @@ cite {
    ========================================================================== */
 /* Add some margins to the main header */
 #main-header {
-  margin-top: 15px;
+  margin-top: -10px;
   margin-bottom: 20px;
 }
 /* ----------------------------------------------------- */
@@ -208,7 +208,8 @@ cite {
 /* ----------------------------------------------------- */
 /* Main Navigation container */
 #main-nav {
-  float: right;
+  float: center;
+  background: #eee;
   position: relative;
 }
 /* Navigation toggle button */
@@ -232,7 +233,6 @@ ul.dropdown {
 }
 ul.dropdown li {
   float: left;
-  zoom: 1;
 }
 ul.dropdown li.hover,
 ul.dropdown li:hover {
@@ -258,8 +258,9 @@ ul.dropdown ul ul {
   /*z-index:600;*/
 }
 ul.dropdown li:hover > ul {
+  /*
   display: block;
-  visibility: visible;
+  visibility: visible;*/
 }
 /* Trigger the sub-menu */
 ul.dropdown .last ul {
@@ -273,24 +274,23 @@ ul.dropdown li a {
 }
 /* Dropdown customization */
 ul.dropdown {
-  margin-top: 6px;
+  margin-top: 4px;
   z-index: 599;
 }
 /* Links status */
 ul.dropdown a:link,
 ul.dropdown a:visited {
   padding: 9px 14px 7px 13px;
-  text-shadow: 0 1px 0 #000;
   color: #c8c8c8;
   text-decoration: none;
   display: block;
   outline: 0;
 }
 ul.dropdown a:hover {
-  color: #fff;
+  color: #000;
 }
 ul.dropdown a:active {
-  background: #212121;
+  color: #000;
 }
 ul.dropdown li {
   -webkit-transition: background 0.3s;
@@ -300,13 +300,11 @@ ul.dropdown li {
   transition: background 0.3s;
 }
 ul.dropdown li:hover {
-  background: #333;
+  color: #000;
 }
 /* Current page */
 ul.dropdown li.current > a {
   color: #333;
-  background: #ccc;
-  text-shadow: 0 1px 0 #efefef;
   font-weight: bold;
 }
 /* Level 1 */
